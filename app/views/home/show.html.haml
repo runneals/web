@@ -1,26 +1,3 @@
-=content_for :title, "Anomaly Registration - Home"
-%h1 Anomaly Registration
-- if current_user
-  - if current_user.profile.nil?
-    .alert.alert-danger
-      Profile not yet filled out, to do so #{link_to "Click here", user_profiles_path(current_user.id)}
-  %p Welcome to anomalyregistration.com, #{current_user.full_name}!  If this isn't you please #{link_to "Log out", signout_path, id: "sign_out"}
-  %h1 
-    News
-    %small= link_to "All", news_index_path
-  -if @news_items.empty?
-    %p No News Items just yet.
-  -else
-    - @news_items.each do |news|
-      .panel.panel-info
-        .panel-heading
-          = link_to news.title, news_path(news)
-        .panel-body
-          = news.body.html_safe
-        -if current_user.role > 1
-          .panel-footer
-            = link_to "Edit News Item", edit_news_path(news)
-            = link_to "Delete News Item", news_path(news), :method => :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-xs pull-right"
-- else
-  %p Welcome to anomalyregistration.com.  To continue, please log in
-  = link_to "Sign in with Google+", "/auth/google_oauth2", id: "sign_in", class: 'btn btn-danger'
+=content_for :title, "The Yellow Alliance - Home"
+%h1 Welcome
+%p Welcome to The Yellow Alliance

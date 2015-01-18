@@ -1,0 +1,18 @@
+- if current_user
+  %li.navbar-text.hidden-sm Signed in as #{current_user.name}
+  %li
+    = link_to user_profiles_path(current_user), title: "Profile" do
+      .hidden-sm
+        %span.glyphicon.glyphicon-user
+        Profile
+      .visible-sm
+        %span.glyphicon.glyphicon-user
+  %li
+    = link_to signout_path, id: "sign_out", title: "Sign Out" do
+      .hidden-sm
+        %span.glyphicon.glyphicon-log-out
+        Sign Out
+      .visible-sm
+        %span.glyphicon.glyphicon-log-out
+- else
+  %li= link_to "Sign in", "/auth/google_oauth2", id: "sign_in", title: "Sign In"

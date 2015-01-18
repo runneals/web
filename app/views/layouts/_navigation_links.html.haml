@@ -1,0 +1,8 @@
+-#Navigation Links
+%li{class: current_page?(root_path) && 'active'}
+  = link_to root_path, title: "Home" do
+    .hidden-sm
+      %span.glyphicon.glyphicon-home
+      Home
+    .visible-sm
+      %span.glyphicon.glyphicon-home
