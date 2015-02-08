@@ -26,7 +26,7 @@ require 'capistrano/rails/migrations'
 Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
 
 set :rvm_type, :user
-set :rvm_ruby_version, '2.1.5-p273'
+set :rvm_ruby_version, '2.1.5'
 set :rvm_ruby_string, :local
 
 # load 'deploy/assets'
