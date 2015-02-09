@@ -1,0 +1,29 @@
+%h1 Listing events
+
+%table
+  %thead
+    %tr
+      %th Season
+      %th Name
+      %th City
+      %th State
+      %th Country
+      %th Start
+      %th End
+      %th Type
+      
+  %tbody
+    - @events.each do |event|
+      %tr
+        %td= event.season.name
+        %td= link_to event.name, event
+        %td= event.city
+        %td= event.state
+        %td= event.country
+        %td= event.start_date
+        %td= event.end_date
+        %td= event.event_type
+
+%br
+
+= link_to 'New Event', new_event_path

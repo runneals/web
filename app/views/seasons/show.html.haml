@@ -1,0 +1,17 @@
+%p
+  %b Year start:
+  = @season.year_start
+%p
+  %b Year end:
+  = @season.year_end
+%p
+  %b Name:
+  = @season.name
+%p
+  %b Offseason:
+  = @season.offseason
+%p
+  %b Logo:
+  = image_tag(@season.logo.url(:medium), class: "img-responsive center-block")
+
+= link_to 'Back', seasons_path

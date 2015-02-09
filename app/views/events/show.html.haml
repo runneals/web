@@ -1,0 +1,28 @@
+%p
+  %b Season:
+  =link_to @event.season.name, @event.season
+%p
+  %b Name:
+  = @event.name
+%p
+  %b City:
+  = @event.city
+%p
+  %b State:
+  = @event.state
+%p
+  %b Country:
+  = @event.country
+%p
+  %b Start:
+  = @event.start_date
+%p
+  %b End:
+  = @event.end_date
+%p
+  %b Type:
+  = @event.event_type
+
+= link_to 'Edit', edit_event_path(@event)
+\|
+= link_to 'Back', events_path

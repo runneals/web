@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :events
+
+  resources :seasons
+
 #Auth stuff
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')

@@ -1,0 +1,15 @@
+= simple_form_for(@event) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :season
+    = f.input :name
+    = f.input :city
+    = f.input :state
+    = f.input :country, priority: ["United States"]
+    = f.input :start_date, as: :datetime_picker
+    = f.input :end_date, as: :datetime_picker
+    = f.input :event_type, collection: @event_types
+
+  .form-actions
+    = f.button :submit

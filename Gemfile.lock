@@ -6,6 +6,14 @@ GIT
       capistrano (~> 3.0)
       sshkit (~> 1.2)
 
+GIT
+  remote: git://github.com/zpaulovics/datetimepicker-rails.git
+  revision: cba2e2f0dd029017a65a571eac186e658426cf1b
+  branch: master
+  submodules: true
+  specs:
+    datetimepicker-rails (3.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -90,6 +98,11 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     colorize (0.7.5)
+    countries (0.9.3)
+      currencies (~> 0.4.2)
+    country_select (2.1.1)
+      countries (>= 0.9.3, < 0.10.0)
+    currencies (0.4.2)
     database_cleaner (1.4.0)
     debug_inspector (0.0.2)
     diff-lcs (1.2.5)
@@ -297,7 +310,9 @@ DEPENDENCIES
   capistrano-rails (~> 1.1.1)
   capistrano-rvm!
   capybara
+  country_select (~> 2.1.1)
   database_cleaner
+  datetimepicker-rails!
   factory_girl_rails
   faker
   font-awesome-rails
@@ -318,7 +333,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 4.0.3)
   selenium-webdriver
-  simple_form
+  simple_form (~> 3.1.0)
   spring
   sqlite3
   therubyracer

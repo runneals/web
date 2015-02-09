@@ -1,0 +1,23 @@
+%h1 Listing seasons
+.table-responsive
+  %table.table.table-stripped
+    %thead
+      %tr
+        %th Years
+        %th Name
+        
+    %tbody
+      - @seasons.each do |season|
+        %tr
+          %td
+            = season.year_start
+            \-
+            = season.year_end
+          %td
+            = link_to season.name, season
+            -if season.offseason == true
+              *
+
+%br
+
+= link_to 'New Season', new_season_path

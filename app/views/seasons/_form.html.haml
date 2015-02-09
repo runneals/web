@@ -1,0 +1,12 @@
+= simple_form_for(@season) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :year_start
+    = f.input :year_end
+    = f.input :name
+    = f.input :offseason
+    = f.input :logo
+
+  .form-actions
+    = f.button :submit
