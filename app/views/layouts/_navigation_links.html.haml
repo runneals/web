@@ -7,7 +7,7 @@
     .visible-sm
       %span.glyphicon.glyphicon-home
 %li{class: params[:controller] == "events" && 'active'}
-  = link_to root_path, title: "Home" do
+  = link_to events_path, title: "Events" do
     .hidden-sm
       %span.glyphicon.glyphicon-calendar
       Events
