@@ -6,6 +6,7 @@ gem 'bootstrap-sass'
 gem 'bootswatch-rails', '~> 3.2.4'
 gem 'bootstrap3-datetimepicker-rails', '~> 3.1.3'
 gem 'country_select', '~> 2.1.1'
+gem 'chartkick'
 gem 'datetimepicker-rails', github: 'zpaulovics/datetimepicker-rails', branch: 'master', submodules: true
 gem 'font-awesome-rails'
 gem 'haml-rails'
