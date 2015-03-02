@@ -1,0 +1,45 @@
+%p#notice= notice
+
+%p
+  %b Division:
+  = @team_division_information.division_id
+%p
+  %b Team:
+  = @team_division_information.team_id
+%p
+  %b Name:
+  = @team_division_information.name
+%p
+  %b Organization:
+  = @team_division_information.organization
+%p
+  %b High:
+  = @team_division_information.high
+%p
+  %b Qp:
+  = @team_division_information.qp
+%p
+  %b Rp:
+  = @team_division_information.rp
+%p
+  %b Qual wins:
+  = @team_division_information.qual_wins
+%p
+  %b Qual losses:
+  = @team_division_information.qual_losses
+%p
+  %b Qual ties:
+  = @team_division_information.qual_ties
+%p
+  %b Elim wins:
+  = @team_division_information.elim_wins
+%p
+  %b Elim losses:
+  = @team_division_information.elim_losses
+%p
+  %b Elim ties:
+  = @team_division_information.elim_ties
+
+= link_to 'Edit', edit_team_division_information_path(@team_division_information)
+\|
+= link_to 'Back', team_division_informations_path

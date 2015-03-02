@@ -23,6 +23,34 @@
   %b Type:
   = @event.event_type
 
+- @event.divisions.each do |division|
+  %p
+    %b Division Name
+    = division.name
+    - division.matches.each do |match|
+      %p
+        %b Match Name
+        = match.name
+        %br
+        = match.r1_team.name
+        %br
+        = match.r2_team.name
+        %br
+        = (match.r3_team.nil?)? "none" : match.r3_team.name
+        %br
+        = match.b1_team.name
+        %br
+        = match.b2_team.name
+        %br
+        = (match.b3_team.nil?)? "none" : match.b3_team.name
+    %b Teams
+    - division.teams.each do |team|
+      %p
+        %b Team Name
+        = team.name
+        %b Team Number
+        = team.id
+
 = link_to 'Edit', edit_event_path(@event)
 \|
 = link_to 'Back', events_path

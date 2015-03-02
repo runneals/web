@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Event:
+  = @award_winner.event_id
+%p
+  %b Award:
+  = @award_winner.award_id
+%p
+  %b Team:
+  = @award_winner.team_id
+%p
+  %b Place:
+  = @award_winner.place
+
+= link_to 'Edit', edit_award_winner_path(@award_winner)
+\|
+= link_to 'Back', award_winners_path

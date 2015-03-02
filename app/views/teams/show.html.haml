@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @team.name
+%p
+  %b City:
+  = @team.city
+%p
+  %b State:
+  = @team.state
+%p
+  %b Country:
+  = @team.country
+%p
+  %b Website:
+  = @team.website
+%p
+  %b Facebook:
+  = @team.facebook
+%p
+  %b Twitter:
+  = @team.twitter
+%p
+  %b Gplus:
+  = @team.gplus
+%p
+  %b Instagram:
+  = @team.instagram
+%p
+  %b Other names:
+  = @team.other_names
+
+= link_to 'Edit', edit_team_path(@team)
+\|
+= link_to 'Back', teams_path

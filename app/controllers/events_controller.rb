@@ -1,4 +1,5 @@
 class EventsController < ApplicationController
+  skip_before_action :require_login, only: [:show, :index]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :set_event_types, only: [:new, :edit, :update, :create]
 

@@ -13,3 +13,10 @@
       Events
     .visible-sm
       %span.glyphicon.glyphicon-calendar
+%li{class: params[:controller] == "teams" && 'active'}
+  = link_to teams_path, title: "Teams" do
+    .hidden-sm
+      %i.fa.fa-users
+      Teams
+    .visible-sm
+      %i.fa.fa-users

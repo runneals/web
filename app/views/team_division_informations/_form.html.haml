@@ -1,0 +1,20 @@
+= simple_form_for(@team_division_information) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :division_id
+    = f.input :team_id
+    = f.input :name
+    = f.input :organization
+    = f.input :high
+    = f.input :qp
+    = f.input :rp
+    = f.input :qual_wins
+    = f.input :qual_losses
+    = f.input :qual_ties
+    = f.input :elim_wins
+    = f.input :elim_losses
+    = f.input :elim_ties
+
+  .form-actions
+    = f.button :submit

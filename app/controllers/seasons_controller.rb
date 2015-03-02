@@ -1,4 +1,5 @@
 class SeasonsController < ApplicationController
+  skip_before_action :require_login, only: [:show, :index]
   before_action :set_season, only: [:show, :edit, :update, :destroy]
 
   # GET /seasons

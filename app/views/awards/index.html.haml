@@ -1,0 +1,25 @@
+%h1 Listing awards
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Description
+      %th Order
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @awards.each do |award|
+      %tr
+        %td= award.name
+        %td= award.description
+        %td= award.order
+        %td= link_to 'Show', award
+        %td= link_to 'Edit', edit_award_path(award)
+        %td= link_to 'Destroy', award, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Award', new_award_path

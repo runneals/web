@@ -1,0 +1,49 @@
+%h1 Listing matches
+
+%table
+  %thead
+    %tr
+      %th Division
+      %th Name
+      %th Type
+      %th R1 team
+      %th R2 team
+      %th R3 team
+      %th B1 team
+      %th B2 team
+      %th B3 team
+      %th Scored red
+      %th Total red
+      %th Scored blue
+      %th Total blue
+      %th Outcome
+      %th Video
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @matches.each do |match|
+      %tr
+        %td= match.division_id
+        %td= match.name
+        %td= match.match_type
+        %td= match.r1_team_id
+        %td= match.r2_team_id
+        %td= match.r3_team_id
+        %td= match.b1_team_id
+        %td= match.b2_team_id
+        %td= match.b3_team_id
+        %td= match.scored_red
+        %td= match.total_red
+        %td= match.scored_blue
+        %td= match.total_blue
+        %td= match.outcome
+        %td= match.video
+        %td= link_to 'Show', match
+        %td= link_to 'Edit', edit_match_path(match)
+        %td= link_to 'Destroy', match, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Match', new_match_path

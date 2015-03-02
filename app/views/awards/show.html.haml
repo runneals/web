@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @award.name
+%p
+  %b Description:
+  = @award.description
+%p
+  %b Order:
+  = @award.order
+
+= link_to 'Edit', edit_award_path(@award)
+\|
+= link_to 'Back', awards_path

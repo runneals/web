@@ -1,0 +1,1 @@
+json.extract! @team_division_information, :id, :division_id, :team_id, :name, :organization, :high, :qp, :rp, :qual_wins, :qual_losses, :qual_ties, :elim_wins, :elim_losses, :elim_ties, :created_at, :updated_at

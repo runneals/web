@@ -1,0 +1,51 @@
+%h1 Listing divisions
+
+%table
+  %thead
+    %tr
+      %th Event
+      %th Division uuid
+      %th Name
+      %th Match count
+      %th Team count
+      %th High total
+      %th High scored
+      %th Average total
+      %th Average scored
+      %th Red wins
+      %th Blue wins
+      %th Ties
+      %th Average winning total
+      %th Average losing total
+      %th Average winning scored
+      %th Average losing scored
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @divisions.each do |division|
+      %tr
+        %td= division.event_id
+        %td= division.division_uuid
+        %td= division.name
+        %td= division.match_count
+        %td= division.team_count
+        %td= division.high_total
+        %td= division.high_scored
+        %td= division.average_total
+        %td= division.average_scored
+        %td= division.red_wins
+        %td= division.blue_wins
+        %td= division.ties
+        %td= division.average_winning_total
+        %td= division.average_losing_total
+        %td= division.average_winning_scored
+        %td= division.average_losing_scored
+        %td= link_to 'Show', division
+        %td= link_to 'Edit', edit_division_path(division)
+        %td= link_to 'Destroy', division, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Division', new_division_path

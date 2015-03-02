@@ -1,0 +1,18 @@
+= simple_form_for(@team) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :id, label: "Team Number"
+    = f.input :name
+    = f.input :city
+    = f.input :state
+    = f.input :country, priority: ["United States"]
+    = f.input :website
+    = f.input :facebook
+    = f.input :twitter
+    = f.input :gplus
+    = f.input :instagram
+    = f.input :other_names
+
+  .form-actions
+    = f.button :submit

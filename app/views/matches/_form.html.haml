@@ -1,0 +1,22 @@
+= simple_form_for(@match) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :division
+    = f.input :name
+    = f.input :match_type
+    = f.input :r1_team_id, :collection => Team.order(:id)
+    = f.input :r2_team_id, :collection => Team.order(:id)
+    = f.input :r3_team_id, :collection => Team.order(:id)
+    = f.input :b1_team_id, :collection => Team.order(:id)
+    = f.input :b2_team_id, :collection => Team.order(:id)
+    = f.input :b3_team_id, :collection => Team.order(:id)
+    = f.input :scored_red
+    = f.input :total_red
+    = f.input :scored_blue
+    = f.input :total_blue
+    = f.input :outcome
+    = f.input :video
+
+  .form-actions
+    = f.button :submit

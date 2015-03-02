@@ -1,0 +1,11 @@
+= simple_form_for(@award_winner) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :event_id
+    = f.input :award_id
+    = f.input :team_id
+    = f.input :place
+
+  .form-actions
+    = f.button :submit

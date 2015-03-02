@@ -1,0 +1,54 @@
+%p#notice= notice
+
+%p
+  %b Event:
+  = @division.event_id
+%p
+  %b Division uuid:
+  = @division.division_uuid
+%p
+  %b Name:
+  = @division.name
+%p
+  %b Match count:
+  = @division.match_count
+%p
+  %b Team count:
+  = @division.team_count
+%p
+  %b High total:
+  = @division.high_total
+%p
+  %b High scored:
+  = @division.high_scored
+%p
+  %b Average total:
+  = @division.average_total
+%p
+  %b Average scored:
+  = @division.average_scored
+%p
+  %b Red wins:
+  = @division.red_wins
+%p
+  %b Blue wins:
+  = @division.blue_wins
+%p
+  %b Ties:
+  = @division.ties
+%p
+  %b Average winning total:
+  = @division.average_winning_total
+%p
+  %b Average losing total:
+  = @division.average_losing_total
+%p
+  %b Average winning scored:
+  = @division.average_winning_scored
+%p
+  %b Average losing scored:
+  = @division.average_losing_scored
+
+= link_to 'Edit', edit_division_path(@division)
+\|
+= link_to 'Back', divisions_path

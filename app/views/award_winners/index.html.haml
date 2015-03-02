@@ -1,0 +1,27 @@
+%h1 Listing award_winners
+
+%table
+  %thead
+    %tr
+      %th Event
+      %th Award
+      %th Team
+      %th Place
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @award_winners.each do |award_winner|
+      %tr
+        %td= award_winner.event_id
+        %td= award_winner.award_id
+        %td= award_winner.team_id
+        %td= award_winner.place
+        %td= link_to 'Show', award_winner
+        %td= link_to 'Edit', edit_award_winner_path(award_winner)
+        %td= link_to 'Destroy', award_winner, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Award winner', new_award_winner_path

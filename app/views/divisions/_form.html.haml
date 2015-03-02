@@ -1,0 +1,23 @@
+= simple_form_for(@division) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.association :event
+    = f.input :division_uuid
+    = f.input :name
+    = f.input :match_count
+    = f.input :team_count
+    = f.input :high_total
+    = f.input :high_scored
+    = f.input :average_total
+    = f.input :average_scored
+    = f.input :red_wins
+    = f.input :blue_wins
+    = f.input :ties
+    = f.input :average_winning_total
+    = f.input :average_losing_total
+    = f.input :average_winning_scored
+    = f.input :average_losing_scored
+
+  .form-actions
+    = f.button :submit

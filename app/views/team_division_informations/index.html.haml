@@ -1,0 +1,45 @@
+%h1 Listing team_division_informations
+
+%table
+  %thead
+    %tr
+      %th Division
+      %th Team
+      %th Name
+      %th Organization
+      %th High
+      %th Qp
+      %th Rp
+      %th Qual wins
+      %th Qual losses
+      %th Qual ties
+      %th Elim wins
+      %th Elim losses
+      %th Elim ties
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @team_division_informations.each do |team_division_information|
+      %tr
+        %td= team_division_information.division_id
+        %td= team_division_information.team_id
+        %td= team_division_information.name
+        %td= team_division_information.organization
+        %td= team_division_information.high
+        %td= team_division_information.qp
+        %td= team_division_information.rp
+        %td= team_division_information.qual_wins
+        %td= team_division_information.qual_losses
+        %td= team_division_information.qual_ties
+        %td= team_division_information.elim_wins
+        %td= team_division_information.elim_losses
+        %td= team_division_information.elim_ties
+        %td= link_to 'Show', team_division_information
+        %td= link_to 'Edit', edit_team_division_information_path(team_division_information)
+        %td= link_to 'Destroy', team_division_information, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Team division information', new_team_division_information_path

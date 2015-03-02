@@ -1,0 +1,51 @@
+%p#notice= notice
+
+%p
+  %b Division:
+  = @match.division_id
+%p
+  %b Name:
+  = @match.name
+%p
+  %b Type:
+  = @match.match_type
+%p
+  %b R1 team:
+  = @match.r1_team_id
+%p
+  %b R2 team:
+  = @match.r2_team_id
+%p
+  %b R3 team:
+  = @match.r3_team_id
+%p
+  %b B1 team:
+  = @match.b1_team_id
+%p
+  %b B2 team:
+  = @match.b2_team_id
+%p
+  %b B3 team:
+  = @match.b3_team_id
+%p
+  %b Scored red:
+  = @match.scored_red
+%p
+  %b Total red:
+  = @match.total_red
+%p
+  %b Scored blue:
+  = @match.scored_blue
+%p
+  %b Total blue:
+  = @match.total_blue
+%p
+  %b Outcome:
+  = @match.outcome
+%p
+  %b Video:
+  = @match.video
+
+= link_to 'Edit', edit_match_path(@match)
+\|
+= link_to 'Back', matches_path
